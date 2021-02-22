@@ -1,5 +1,3 @@
-# JS Ethereum Signature Example
+# Binance & ETH Sign Example
 
-Simplest possible signature examples, for use with [MetaMask](https://metamask.io).
-
-[Live Demo Here](https://danfinlay.github.io/js-eth-personal-sign-examples/)
+Simplest possible signature examples, for use with Binance Wallet & [MetaMask](https://metamask.io).
