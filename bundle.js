@@ -80,6 +80,36 @@
     });
   });
 
+  // Works in Brave
+  ethSignButton.addEventListener('click', function(event) {
+    (async() => {
+      event.preventDefault();
+      var msg = 'hello world';
+      var accounts = await ethereum.request({ method: 'eth_accounts' });
+      var from = accounts[0];
+      if (!from) return connectETHChain();
+      web3.eth.sign(from, web3.sha3(msg), function(err, result){
+        if (err){
+          return console.error(err)
+        };
+        console.log("Signed", result);
+      })
+    })();
+  })
+
+  /* 
+  ethSignButton.addEventListener('click', function(event) {
+    event.preventDefault()
+    var msg = '0x879a053d4800c6354e76c7985a865d2922c82fb5b3f4577b2fe08b998954f2e0'
+    var from = web3.eth.accounts[0]
+    if (!from) return connect()
+    web3.eth.sign(from, msg, function (err, result) {
+      if (err) return console.error(err)
+      console.log('SIGNED:' + result)
+    })
+  })
+  */
+
   ethPersonalSign.addEventListener("click", function (event) {
     event.preventDefault();
     var text = "hello world";

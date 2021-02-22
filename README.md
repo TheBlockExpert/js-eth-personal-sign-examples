@@ -4,7 +4,8 @@ Simplest possible signature examples, for use with Binance Wallet & [MetaMask](h
 
 ### Run
 ```
-clone
+clone https://github.com/TheBlockExpert/js-eth-personal-sign-examples.git
+cd js-eth-personal-sign-examples
 yarn
 yarn serve
 ```
